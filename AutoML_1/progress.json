@@ -1,0 +1,467 @@
+{
+    "fit_level": "finished",
+    "time_controller": {
+        "total_time_limit": 3600,
+        "model_time_limit": null,
+        "steps": [
+            "simple_algorithms",
+            "default_algorithms",
+            "ensemble"
+        ],
+        "algorithms": [
+            "Baseline",
+            "Decision Tree",
+            "Random Forest",
+            "Xgboost",
+            "Neural Network"
+        ],
+        "spend": [
+            {
+                "model_name": "prepare_data",
+                "model_type": "prepare_data",
+                "fit_level": "prepare_data",
+                "train_time": 1.392726182937622
+            },
+            {
+                "model_name": "1_Baseline",
+                "model_type": "Baseline",
+                "fit_level": "simple_algorithms",
+                "train_time": 0.7254886627197266
+            },
+            {
+                "model_name": "2_DecisionTree",
+                "model_type": "Decision Tree",
+                "fit_level": "simple_algorithms",
+                "train_time": 25.034213542938232
+            },
+            {
+                "model_name": "3_Default_Xgboost",
+                "model_type": "Xgboost",
+                "fit_level": "default_algorithms",
+                "train_time": 16.458674907684326
+            },
+            {
+                "model_name": "4_Default_NeuralNetwork",
+                "model_type": "Neural Network",
+                "fit_level": "default_algorithms",
+                "train_time": 23.761472463607788
+            },
+            {
+                "model_name": "5_Default_RandomForest",
+                "model_type": "Random Forest",
+                "fit_level": "default_algorithms",
+                "train_time": 27.345249891281128
+            },
+            {
+                "model_name": "Ensemble",
+                "model_type": "Ensemble",
+                "fit_level": "ensemble",
+                "train_time": 3.0130255222320557
+            }
+        ],
+        "is_hill_climbing": false,
+        "is_stacking": false
+    },
+    "all_params": {
+        "simple_algorithms": [
+            {
+                "additional": {
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Cancelled": [
+                            "remove_column"
+                        ],
+                        "Diverted": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_1\\X.data",
+                    "y_path": "AutoML_1\\y.data",
+                    "results_path": "AutoML_1"
+                },
+                "learner": {
+                    "model_type": "Baseline",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "1_Baseline",
+                "status": "trained",
+                "final_loss": 0.46578816660381017,
+                "train_time": 1.2412755489349365,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 1,
+                    "train_cant_improve_limit": 0,
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Airline": [
+                            "categorical_to_int"
+                        ],
+                        "Cancelled": [
+                            "remove_column"
+                        ],
+                        "Carrier_Code(IATA)": [
+                            "categorical_to_int"
+                        ],
+                        "Destination_Airport": [
+                            "categorical_to_int"
+                        ],
+                        "Destination_State": [
+                            "categorical_to_int"
+                        ],
+                        "Diverted": [
+                            "remove_column"
+                        ],
+                        "ID": [
+                            "text_transform"
+                        ],
+                        "Origin_Airport": [
+                            "categorical_to_int"
+                        ],
+                        "Origin_State": [
+                            "categorical_to_int"
+                        ],
+                        "Tail_Number": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_1\\X.data",
+                    "y_path": "AutoML_1\\y.data",
+                    "results_path": "AutoML_1"
+                },
+                "learner": {
+                    "model_type": "Decision Tree",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "criterion": "gini",
+                    "max_depth": 3,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "2_DecisionTree",
+                "status": "trained",
+                "final_loss": 0.453620681164191,
+                "train_time": 26.000814199447632,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "default_algorithms": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Airline": [
+                            "categorical_to_int"
+                        ],
+                        "Cancelled": [
+                            "remove_column"
+                        ],
+                        "Carrier_Code(IATA)": [
+                            "categorical_to_int"
+                        ],
+                        "Destination_Airport": [
+                            "categorical_to_int"
+                        ],
+                        "Destination_State": [
+                            "categorical_to_int"
+                        ],
+                        "Diverted": [
+                            "remove_column"
+                        ],
+                        "ID": [
+                            "text_transform"
+                        ],
+                        "Origin_Airport": [
+                            "categorical_to_int"
+                        ],
+                        "Origin_State": [
+                            "categorical_to_int"
+                        ],
+                        "Tail_Number": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_1\\X.data",
+                    "y_path": "AutoML_1\\y.data",
+                    "results_path": "AutoML_1"
+                },
+                "learner": {
+                    "model_type": "Xgboost",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "objective": "binary:logistic",
+                    "eta": 0.075,
+                    "max_depth": 6,
+                    "min_child_weight": 1,
+                    "subsample": 1.0,
+                    "colsample_bytree": 1.0,
+                    "seed": 3,
+                    "eval_metric": "logloss",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "3_Default_Xgboost",
+                "status": "trained",
+                "final_loss": 0.44198340739660674,
+                "train_time": 17.392422676086426,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Airline": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Cancelled": [
+                            "remove_column"
+                        ],
+                        "Carrier_Code(IATA)": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Carrier_ID(DOT)": [
+                            "scale_normal"
+                        ],
+                        "Day_of_Month": [
+                            "scale_normal"
+                        ],
+                        "Destination_Airport": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Destination_Airport_ID": [
+                            "scale_normal"
+                        ],
+                        "Destination_State": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Distance": [
+                            "scale_normal"
+                        ],
+                        "Diverted": [
+                            "remove_column"
+                        ],
+                        "Estimated_Arrival_Time": [
+                            "scale_normal"
+                        ],
+                        "Estimated_Departure_Time": [
+                            "scale_normal"
+                        ],
+                        "ID": [
+                            "text_transform"
+                        ],
+                        "Month": [
+                            "scale_normal"
+                        ],
+                        "Origin_Airport": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Origin_Airport_ID": [
+                            "scale_normal"
+                        ],
+                        "Origin_State": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Tail_Number": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_1\\X.data",
+                    "y_path": "AutoML_1\\y.data",
+                    "results_path": "AutoML_1"
+                },
+                "learner": {
+                    "model_type": "Neural Network",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "dense_1_size": 32,
+                    "dense_2_size": 16,
+                    "learning_rate": 0.05,
+                    "seed": 4,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "4_Default_NeuralNetwork",
+                "status": "trained",
+                "final_loss": 0.458453230334744,
+                "train_time": 24.62606978416443,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Airline": [
+                            "categorical_to_int"
+                        ],
+                        "Cancelled": [
+                            "remove_column"
+                        ],
+                        "Carrier_Code(IATA)": [
+                            "categorical_to_int"
+                        ],
+                        "Destination_Airport": [
+                            "categorical_to_int"
+                        ],
+                        "Destination_State": [
+                            "categorical_to_int"
+                        ],
+                        "Diverted": [
+                            "remove_column"
+                        ],
+                        "ID": [
+                            "text_transform"
+                        ],
+                        "Origin_Airport": [
+                            "categorical_to_int"
+                        ],
+                        "Origin_State": [
+                            "categorical_to_int"
+                        ],
+                        "Tail_Number": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "AutoML_1\\X.data",
+                    "y_path": "AutoML_1\\y.data",
+                    "results_path": "AutoML_1"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "criterion": "gini",
+                    "max_features": 0.9,
+                    "min_samples_split": 30,
+                    "max_depth": 4,
+                    "seed": 5,
+                    "eval_metric_name": "logloss",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "5_Default_RandomForest",
+                "status": "trained",
+                "final_loss": 0.4507460104097629,
+                "train_time": 28.330881595611572,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "ensemble": [
+            {
+                "model_type": "ensemble",
+                "is_stacked": false,
+                "name": "Ensemble",
+                "status": "trained",
+                "final_loss": 0.4419834066027032,
+                "train_time": 3.0130255222320557
+            }
+        ]
+    },
+    "adjust_validation": false
+}

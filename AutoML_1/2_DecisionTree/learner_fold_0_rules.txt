@@ -1,0 +1,16 @@
+if (Estimated_Departure_Time <= 1238.5) and (Estimated_Arrival_Time > 1137.5) and (Estimated_Arrival_Time <= 1533.5) then class: Not_Delayed (proba: 85.45%) | based on 12,171 samples
+
+if (Estimated_Departure_Time <= 1238.5) and (Estimated_Arrival_Time <= 1137.5) and (Carrier_ID(DOT) > 19797.5) then class: Not_Delayed (proba: 88.6%) | based on 11,927 samples
+
+if (Estimated_Departure_Time > 1238.5) and (Month <= 8.5) and (Month > 4.5) then class: Not_Delayed (proba: 72.6%) | based on 11,124 samples
+
+if (Estimated_Departure_Time > 1238.5) and (Month > 8.5) and (Day_of_Month > 8.5) then class: Not_Delayed (proba: 79.94%) | based on 10,804 samples
+
+if (Estimated_Departure_Time > 1238.5) and (Month <= 8.5) and (Month <= 4.5) then class: Not_Delayed (proba: 78.89%) | based on 10,597 samples
+
+if (Estimated_Departure_Time <= 1238.5) and (Estimated_Arrival_Time <= 1137.5) and (Carrier_ID(DOT) <= 19797.5) then class: Not_Delayed (proba: 92.46%) | based on 6,263 samples
+
+if (Estimated_Departure_Time > 1238.5) and (Month > 8.5) and (Day_of_Month <= 8.5) then class: Not_Delayed (proba: 83.45%) | based on 3,759 samples
+
+if (Estimated_Departure_Time <= 1238.5) and (Estimated_Arrival_Time > 1137.5) and (Estimated_Arrival_Time > 1533.5) then class: Not_Delayed (proba: 77.68%) | based on 1,626 samples
+

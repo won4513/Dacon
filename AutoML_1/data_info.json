@@ -1,0 +1,94 @@
+{
+    "columns": [
+        "Airline",
+        "Cancelled",
+        "Carrier_Code(IATA)",
+        "Carrier_ID(DOT)",
+        "Day_of_Month",
+        "Destination_Airport",
+        "Destination_Airport_ID",
+        "Destination_State",
+        "Distance",
+        "Diverted",
+        "Estimated_Arrival_Time",
+        "Estimated_Departure_Time",
+        "ID",
+        "Month",
+        "Origin_Airport",
+        "Origin_Airport_ID",
+        "Origin_State",
+        "Tail_Number"
+    ],
+    "rows": 91029,
+    "cols": 18,
+    "target_is_numeric": false,
+    "columns_info": {
+        "Airline": [
+            "categorical",
+            "many_categories"
+        ],
+        "Cancelled": [
+            "constant_column"
+        ],
+        "Carrier_Code(IATA)": [
+            "categorical",
+            "few_categories"
+        ],
+        "Carrier_ID(DOT)": [
+            "scale"
+        ],
+        "Day_of_Month": [
+            "scale"
+        ],
+        "Destination_Airport": [
+            "categorical",
+            "many_categories"
+        ],
+        "Destination_Airport_ID": [
+            "scale"
+        ],
+        "Destination_State": [
+            "categorical",
+            "many_categories"
+        ],
+        "Distance": [
+            "scale"
+        ],
+        "Diverted": [
+            "constant_column"
+        ],
+        "Estimated_Arrival_Time": [
+            "scale"
+        ],
+        "Estimated_Departure_Time": [
+            "scale"
+        ],
+        "ID": [
+            "text_transform"
+        ],
+        "Month": [
+            "scale"
+        ],
+        "Origin_Airport": [
+            "categorical",
+            "many_categories"
+        ],
+        "Origin_Airport_ID": [
+            "scale"
+        ],
+        "Origin_State": [
+            "categorical",
+            "many_categories"
+        ],
+        "Tail_Number": [
+            "categorical",
+            "many_categories"
+        ]
+    },
+    "target_info": [
+        "convert_0_1"
+    ],
+    "n_features": 18,
+    "is_sample_weighted": false,
+    "n_classes": 2
+}
