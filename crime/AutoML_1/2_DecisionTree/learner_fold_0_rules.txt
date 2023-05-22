@@ -1,0 +1,16 @@
+if (범죄발생지 <= 8.5) and (범죄발생지 > 4.5) and (범죄발생지 > 6.5) then class: 0 (proba: 53.95%) | based on 22,360 samples
+
+if (범죄발생지 > 8.5) and (범죄발생지 <= 10.5) and (소관경찰서 <= 1126.5) then class: 2 (proba: 45.3%) | based on 10,228 samples
+
+if (범죄발생지 > 8.5) and (범죄발생지 <= 10.5) and (소관경찰서 > 1126.5) then class: 1 (proba: 43.88%) | based on 7,306 samples
+
+if (범죄발생지 <= 8.5) and (범죄발생지 > 4.5) and (범죄발생지 <= 6.5) then class: 0 (proba: 70.94%) | based on 3,964 samples
+
+if (범죄발생지 > 8.5) and (범죄발생지 > 10.5) and (범죄발생지 <= 11.5) then class: 1 (proba: 67.17%) | based on 2,866 samples
+
+if (범죄발생지 <= 8.5) and (범죄발생지 <= 4.5) and (범죄발생지 > 1.5) then class: 0 (proba: 44.15%) | based on 1,760 samples
+
+if (범죄발생지 <= 8.5) and (범죄발생지 <= 4.5) and (범죄발생지 <= 1.5) then class: 1 (proba: 71.03%) | based on 1,360 samples
+
+if (범죄발생지 > 8.5) and (범죄발생지 > 10.5) and (범죄발생지 > 11.5) then class: 0 (proba: 58.45%) | based on 799 samples
+

@@ -1,0 +1,200 @@
+{
+    "uid": "b5a6cf46-1f13-4d00-84c5-7b45afe39a1d",
+    "name": "4_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        3.1123694061482476,
+                        1.9997072086293095,
+                        3.562710808895943,
+                        699.7903364599483,
+                        13.873950552605274,
+                        0.9584239067151726,
+                        63.26022819803188,
+                        98.12066533647037,
+                        2.270082344881819
+                    ],
+                    "mean": [
+                        6.415694172936043,
+                        3.040558418735067,
+                        6.760164287265762,
+                        1061.2872855083624,
+                        26.902849357265566,
+                        1.9116911293352936,
+                        24.718353568349123,
+                        187.00155993918213,
+                        7.942617933376774
+                    ],
+                    "var": [
+                        9.686843320327597,
+                        3.998828920244025,
+                        12.692908307823984,
+                        489706.5150027277,
+                        192.48650393613622,
+                        0.9185763849631738,
+                        4001.8564716670685,
+                        9627.664966071618,
+                        5.153273852544139
+                    ],
+                    "n_samples_seen": 50643,
+                    "n_features_in": 9,
+                    "columns": [
+                        "\uc6d4",
+                        "\uc694\uc77c",
+                        "\uc2dc\uac04",
+                        "\uc18c\uad00\uacbd\ucc30\uc11c",
+                        "\uc18c\uad00\uc9c0\uc5ed",
+                        "\uc0ac\uac74\ubc1c\uc0dd\uac70\ub9ac",
+                        "\uac15\uc218\ub7c9(mm)",
+                        "\ud48d\ud5a5",
+                        "\ubc94\uc8c4\ubc1c\uc0dd\uc9c0"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                "0": 0,
+                "1": 1,
+                "2": 2
+            },
+            "ml_task": "multiclass_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "\uc6d4": [
+                        "scale_normal"
+                    ],
+                    "\uc694\uc77c": [
+                        "scale_normal"
+                    ],
+                    "\uc2dc\uac04": [
+                        "scale_normal"
+                    ],
+                    "\uc18c\uad00\uacbd\ucc30\uc11c": [
+                        "scale_normal"
+                    ],
+                    "\uc18c\uad00\uc9c0\uc5ed": [
+                        "scale_normal"
+                    ],
+                    "\uc0ac\uac74\ubc1c\uc0dd\uac70\ub9ac": [
+                        "scale_normal"
+                    ],
+                    "\uac15\uc218\ub7c9(mm)": [
+                        "scale_normal"
+                    ],
+                    "\ud48d\ud5a5": [
+                        "scale_normal"
+                    ],
+                    "\ubc94\uc8c4\ubc1c\uc0dd\uc9c0": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "multiclass_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.2.1",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "83f68ffb-54d1-47a0-9e82-10dbb3734f80",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "multiclass_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 4,
+                "num_class": 3,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "\uc6d4": [
+                    "scale_normal"
+                ],
+                "\uc694\uc77c": [
+                    "scale_normal"
+                ],
+                "\uc2dc\uac04": [
+                    "scale_normal"
+                ],
+                "\uc18c\uad00\uacbd\ucc30\uc11c": [
+                    "scale_normal"
+                ],
+                "\uc18c\uad00\uc9c0\uc5ed": [
+                    "scale_normal"
+                ],
+                "\uc0ac\uac74\ubc1c\uc0dd\uac70\ub9ac": [
+                    "scale_normal"
+                ],
+                "\uac15\uc218\ub7c9(mm)": [
+                    "scale_normal"
+                ],
+                "\ud48d\ud5a5": [
+                    "scale_normal"
+                ],
+                "\ubc94\uc8c4\ubc1c\uc0dd\uc9c0": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "multiclass_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_1\\X.data",
+            "y_path": "AutoML_1\\y.data",
+            "results_path": "AutoML_1"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "multiclass_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 4,
+            "num_class": 3,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "multiclass_classification",
+        "explain_level": 2,
+        "name": "4_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "4_Default_NeuralNetwork\\learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "4_Default_NeuralNetwork\\predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": 1.008664227455871,
+    "train_time": 12.08342170715332,
+    "is_stacked": false
+}
